@@ -1,7 +1,7 @@
 ﻿// -------------------------------------------------------------------------------------------------
 // linux_input_fix.cs 0.0.1
 //
-// Simple KSP plugin to take linux_input_fix ingame.
+// Poor man fix for KSP linux bug: http://bugs.kerbalspaceprogram.com/issues/1230 
 // Copyright (C) 2014 Iván Atienza
 //
 // This program is free software: you can redistribute it and/or modify
