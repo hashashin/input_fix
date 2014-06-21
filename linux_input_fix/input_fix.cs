@@ -1,7 +1,7 @@
 ﻿// -------------------------------------------------------------------------------------------------
 // linux_input_fix.cs 0.0.1
 //
-// Poor man fix for KSP linux bug: http://bugs.kerbalspaceprogram.com/issues/1230 
+// Simple KSP plugin to take linux_input_fix ingame.
 // Copyright (C) 2014 Iván Atienza
 //
 // This program is free software: you can redistribute it and/or modify
@@ -41,15 +41,15 @@ namespace input_fix
         private string _btexture_off = "input_fix/Textures/icon_off";
 
         private const ControlTypes BLOCK_ALL_CONTROLS = ControlTypes.ALL_SHIP_CONTROLS | ControlTypes.ACTIONS_ALL | ControlTypes.EVA_INPUT | ControlTypes.TIMEWARP | ControlTypes.MISC | ControlTypes.GROUPS_ALL | ControlTypes.CUSTOM_ACTION_GROUPS;
-        
-        
+
+
         void Awake()
         {
             LoadSettings();
             CheckDefaults();
             GUI.SetNextControlName("input_fix");
         }
-        
+
         void Start()
         {
             if (ToolbarManager.ToolbarAvailable)
@@ -94,7 +94,7 @@ namespace input_fix
             else
             {
                 _lock = true;
-                
+
                 InputLockManager.SetControlLock(BLOCK_ALL_CONTROLS, "input_fix");
                 ScreenMessages.PostScreenMessage("INPUT LOCKED", 3f, ScreenMessageStyle.UPPER_CENTER);
                 _button.TexturePath = _btexture_on;
@@ -123,11 +123,11 @@ namespace input_fix
 
         private void CheckDefaults()
         {
-            
+
             if (_keybind == null)
             {
                 _keybind = "i";
-            }            
+            }
         }
     }
 }
